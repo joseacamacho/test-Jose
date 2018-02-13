@@ -1,0 +1,62 @@
+---
+title: "test"
+author: "Jose Camacho"
+date: "February 13, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(languageR)
+library(tidyverse)
+str(spanish)
+```
+##Tidy some data
+Participants
+```{r}
+my_data <- spanish %>%
+  select(.,x = X14461gll, y = X14473gll) %>%
+  filter(.,y<0.06, x<.075)
+
+  my_data %>%
+  ggplot(.,aes(x = x, y = y))+
+geom_point()+
+geom_smooth(method ='lm')
+```
+
+##Mode
+```{r}
+my_fit <- lm(y~x, data = my_data)
+summary(my_fit)
+````
+
+The data were like this. Slope `r confint(my_fit)[1]`
+```{R}
+
+hist(residuals(my_fit))
+
+```
+```{r}
+str(spanish)
+````
+
+#Another example
+```{r}
+
+my_data2 <- spanish %>%
+  select(.,x = X14466gll, y = X14473gll) %>%
+  filter(.,y<0.06, x<.075)
+
+  my_data2 %>%
+  ggplot(.,aes(x = x, y = y))+
+geom_point()+
+geom_smooth(method ='lm')
+  
+  my_fit2 <- lm(y~x, data = my_data)
+summary(my_fit2)
+
+hist(residuals(my_fit2))
+
+```

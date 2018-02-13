@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1518538302453.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CA928EB6",
+    "lastKnownWriteTime" : 1518542029,
+    "last_content_update" : 1518542029195,
+    "path" : "~/ling/Stats/test-Jose/tst.Rmd",
+    "project_path" : "tst.Rmd",
+    "properties" : {
+        "cursorPosition" : "52,30",
+        "scrollLine" : "31",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

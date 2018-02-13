@@ -1,0 +1,18 @@
+---
+title: "regression"
+author: "Jose Camacho"
+date: "February 13, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#Regression example
+
+This is a simple regression example
+
+```{r}
+library(languageR)
+str(spanish)
+````
